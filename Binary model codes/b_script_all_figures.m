@@ -3,7 +3,7 @@ clc
 close all
 clear;
 
-font=14;
+font=20;
 
 %%%% TE Figures %%%%
 
