@@ -3,7 +3,7 @@ clc
 close all
 clear;
 
-font=14;
+font=20;
 tau_max=4;
 num_trail=20;
 nsymbols=16;
