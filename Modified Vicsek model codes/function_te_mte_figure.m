@@ -29,16 +29,21 @@ end
 
 %%%%%%%%%%%%% Figure %%%%%%%%%%%%%%%%
 
+%%%%%%%%%% transfer entropy figure %%%%%%%%%%%%%%
 
-%%%%%%%%%% transfer entropy figure %%%%%%%%%
+fig=figure('papersize',[48.4 13.72]); %orient tall %[11.69 6.27];
+ax1=axes('position',[0.08 0.32 0.25 0.4]); % [x corr y corr width hight]
+bx1=axes('position',[0.40 0.32 0.25 0.4]);
+cx1=axes('position',[0.72 0.32 0.25 0.4]); % [x corr y corr width hight]
 
-figure
+set(fig,'currentaxes',ax1);
 for tau_ind=1:tau_max
-    plot(coup_array,tran_ent_xy{tau_ind}(noise,:),'LineWidth',1.5)
+    plot(coup_array,tran_ent_xy{tau_ind}(noise,:),'LineWidth',2.5)
     hold on
 end
 xlabel('Coupling strength $(w)$ ','interpreter','latex')
 ylabel('$T_{X\rightarrow Y}$','interpreter','latex')
+title('(a)','interpreter','latex')
 legend('${\tau=1}$','${\tau=2}$','${\tau=3}$','${\tau=4}$','location','northwest','interpreter','latex')
 xlim([coup_min coup_max])
 xticks([0 0.4 0.8 1.2 1.6 2])
@@ -50,13 +55,14 @@ set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
 
 
-figure
+set(fig,'currentaxes',bx1);
 for tau_ind=1:tau_max
-    plot(coup_array,tran_ent_yz{tau_ind}(noise,:),'LineWidth',1.5)
+    plot(coup_array,tran_ent_yz{tau_ind}(noise,:),'LineWidth',2.5)
     hold on
 end
 xlabel('Coupling strength $(w)$ ','interpreter','latex')
 ylabel('$T_{Y\rightarrow Z}$','interpreter','latex')
+title('(b)','interpreter','latex')
 legend('${\tau=1}$','${\tau=2}$','${\tau=3}$','${\tau=4}$','location','northwest','interpreter','latex')
 xlim([coup_min coup_max])
 xticks([0 0.4 0.8 1.2 1.6 2])
@@ -68,13 +74,14 @@ set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
 
 
-figure
+set(fig,'currentaxes',cx1);
 for tau_ind=1:tau_max
-    plot(coup_array,tran_ent_xz{tau_ind}(noise,:),'LineWidth',1.5)
+    plot(coup_array,tran_ent_xz{tau_ind}(noise,:),'LineWidth',2.5)
     hold on
 end
 xlabel('Coupling strength $(w)$ ','interpreter','latex')
 ylabel('$T_{X\rightarrow Z}$','interpreter','latex')
+title('(c)','interpreter','latex')
 legend('${\tau=1}$','${\tau=2}$','${\tau=3}$','${\tau=4}$','location','northwest','interpreter','latex')
 xlim([coup_min coup_max])
 xticks([0 0.4 0.8 1.2 1.6 2])
@@ -85,17 +92,26 @@ yticklabels({'0','0.05','0.10','0.15','0.20','0.25'})
 set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%% modified transfer entropy figure %%%%%%%%%%%%%%
 
-figure
+fig=figure('papersize',[48.4 13.72]); %orient tall %[11.69 6.27];
+ax1=axes('position',[0.08 0.32 0.25 0.4]); % [x corr y corr width hight]
+bx1=axes('position',[0.40 0.32 0.25 0.4]);
+cx1=axes('position',[0.72 0.32 0.25 0.4]); % [x corr y corr width hight]
+
+set(fig,'currentaxes',ax1);
 for tau_ind=1:tau_max
-    plot(coup_array,tran_ent_new_xy{tau_ind}(noise,:),'LineWidth',1.5)
+    plot(coup_array,tran_ent_new_xy{tau_ind}(noise,:),'LineWidth',2.5)
     hold on
 end
 xlabel('Coupling strength $(w)$ ','interpreter','latex')
 ylabel('$MT_{X\rightarrow Y}$','interpreter','latex')
+title('(a)','interpreter','latex')
 legend('${\tau=1}$','${\tau=2}$','${\tau=3}$','${\tau=4}$','location','northwest','interpreter','latex')
 xlim([coup_min coup_max])
 xticks([0 0.4 0.8 1.2 1.6 2])
@@ -107,13 +123,14 @@ set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
 
 
-figure
+set(fig,'currentaxes',bx1);
 for tau_ind=1:tau_max
-    plot(coup_array,tran_ent_new_yz{tau_ind}(noise,:),'LineWidth',1.5)
+    plot(coup_array,tran_ent_new_yz{tau_ind}(noise,:),'LineWidth',2.5)
     hold on
 end
 xlabel('Coupling strength $(w)$ ','interpreter','latex')
 ylabel('$MT_{Y\rightarrow Z}$','interpreter','latex')
+title('(b)','interpreter','latex')
 legend('${\tau=1}$','${\tau=2}$','${\tau=3}$','${\tau=4}$','location','northwest','interpreter','latex')
 xlim([coup_min coup_max])
 xticks([0 0.4 0.8 1.2 1.6 2])
@@ -125,13 +142,14 @@ set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
 
 
-figure
+set(fig,'currentaxes',cx1);
 for tau_ind=1:tau_max
-    plot(coup_array,tran_ent_new_xz{tau_ind}(noise,:),'LineWidth',1.5)
+    plot(coup_array,tran_ent_new_xz{tau_ind}(noise,:),'LineWidth',2.5)
     hold on
 end
 xlabel('Coupling strength $(w)$ ','interpreter','latex')
 ylabel('$MT_{X\rightarrow Z}$','interpreter','latex')
+title('(c)','interpreter','latex')
 legend('${\tau=1}$','${\tau=2}$','${\tau=3}$','${\tau=4}$','location','northwest','interpreter','latex')
 xlim([coup_min coup_max])
 xticks([0 0.4 0.8 1.2 1.6 2])
@@ -141,6 +159,7 @@ yticks([0 0.05 0.10 0.15])
 yticklabels({'0','0.05','0.10','0.15'})
 set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
+
 
 end
 %%%%%%%%%%%%%%%%%%% complete %%%%%%%%%%%%%%%%%%%
