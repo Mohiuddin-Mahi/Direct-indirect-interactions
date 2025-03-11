@@ -1,5 +1,5 @@
 
-
+%%%% Firstly, one has to run the python code to generate the time series data for agents in LD simulation, then upload all data in the folder naming as py_data and run these codes in Maltab.
 %%% Input parameters %%%
 clc
 close all
