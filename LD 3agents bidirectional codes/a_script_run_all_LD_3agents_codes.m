@@ -1,5 +1,5 @@
 
-
+%%%% Firstly, one has to generate time series data of agents by running the python code. Then, need to upload those data in the py_data folder in Matlab and run the rest of the codes
 %%% Input parameters %%%
 clc
 close all
