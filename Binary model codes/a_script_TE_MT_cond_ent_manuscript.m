@@ -89,13 +89,13 @@ for coup_ind=1:length(coup_array)
 end
 
 set(fig,'currentaxes',cx1);
-h1 = plot(tau_array,cond_ent1_new{coup_ind}(c1,:),'-+', 'LineWidth',2.5, 'Color', [0 0.4470 0.7410]);
+h1 = plot(tau_array,cond_ent1_new{c1}(c1,:),'-+', 'LineWidth',2.5, 'Color', [0 0.4470 0.7410]);
 hold on
-h2 = plot(tau_array,cond_ent1_new{coup_ind}(c2,:), '-o','LineWidth',2.5, 'Color', [0.8500 0.3250 0.0980]);
-h3 = plot(tau_array,cond_ent1_new{coup_ind}(c3,:),'-*', 'LineWidth',2.5, 'Color', [0.9290 0.6940 0.1250]);
-h4 = plot(tau_array,cond_ent1{coup_ind}(c1,:),':+', 'LineWidth',2.5, 'Color', [0 0.4470 0.7410]);
-h5 = plot(tau_array,cond_ent1{coup_ind}(c2,:), ':o','LineWidth',2.5, 'Color', [0.8500 0.3250 0.0980]);
-h6 = plot(tau_array,cond_ent1{coup_ind}(c3,:),':*', 'LineWidth',2.5, 'Color', [0.9290 0.6940 0.1250]);
+h2 = plot(tau_array,cond_ent1_new{c2}(c2,:), '-o','LineWidth',2.5, 'Color', [0.8500 0.3250 0.0980]);
+h3 = plot(tau_array,cond_ent1_new{c3}(c3,:),'-*', 'LineWidth',2.5, 'Color', [0.9290 0.6940 0.1250]);
+h4 = plot(tau_array,cond_ent1{c1}(c1,:),':+', 'LineWidth',2.5, 'Color', [0 0.4470 0.7410]);
+h5 = plot(tau_array,cond_ent1{c2}(c2,:), ':o','LineWidth',2.5, 'Color', [0.8500 0.3250 0.0980]);
+h6 = plot(tau_array,cond_ent1{c3}(c3,:),':*', 'LineWidth',2.5, 'Color', [0.9290 0.6940 0.1250]);
 xlabel('Time delay $(\tau)$', 'Interpreter', 'latex', 'FontSize', 23);
 title('(c)','interpreter','latex')
 xlim([1 9])
