@@ -108,14 +108,12 @@ set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
 ylabel('$H(Y_{t+\tau}|Y_t)~\&~H(Y_{t+\tau}|Y_t,X_t)$', 'Interpreter', 'latex', 'FontSize', 14);
 
-%%5 First legend for upper bound of MT %%%
 leg1 = legend([h41, h51, h61], {'$H(Y_{t+\tau}|Y_t,X_t)$: $q,p=0.15$', '$H(Y_{t+\tau}|Y_t,X_t)$: $q,p=0.25$', '$H(Y_{t+\tau}|Y_t,X_t)$: $q,p=0.35$'}, ...
               'Location', 'southeast', 'Interpreter', 'latex', 'FontSize', 11);
 set(leg1, 'Box', 'off'); % Remove box to make it look cleaner
 
 ax2 = axes('Position', get(gca, 'Position'), 'Color', 'none', 'XTick', [], 'YTick', [], 'XColor', 'none', 'YColor', 'none');
 
-%%% Second legend for upper bound of TE %%%
 leg2 = legend(ax2, [h4, h5, h6], {'$H(Y_{t+\tau}|Y_t),$', '$H(Y_{t+\tau}|Y_t),$', '$H(Y_{t+\tau}|Y_t),$'}, ...
               'Location', 'southwest', 'Interpreter', 'latex', 'FontSize', 11);
 set(leg2, 'Box', 'off'); % Remove box for a clean look
@@ -144,14 +142,12 @@ set(gca,FontSize=font);
 set(gca,'TickLabelInterpreter','latex');
 ylabel('$H(Y_{t+\tau}|Y_{t+\tau-1})~\&~H(Y_{t+\tau}|Y_{t+\tau-1},X_t)$', 'Interpreter', 'latex', 'FontSize', 14);
 
-% %%5 First legend for upper bound of MT %%%
 leg1 = legend([h11, h21, h31], {'$H(Y_{t+\tau}|Y_{t+\tau-1},X_t)$: $q,p=0.15$', '$H(Y_{t+\tau}|Y_{t+\tau-1},X_t)$: $q,p=0.25$', '$H(Y_{t+\tau}|Y_{t+\tau-1},X_t)$: $q,p=0.35$'}, ...
               'Location', 'southeast', 'Interpreter', 'latex', 'FontSize', 11);
 set(leg1, 'Box', 'off'); % Remove box to make it look cleaner
 
 ax2 = axes('Position', get(gca, 'Position'), 'Color', 'none', 'XTick', [], 'YTick', [], 'XColor', 'none', 'YColor', 'none');
 
-%%% Second legend for upper bound of TE %%%
 leg2 = legend(ax2, [h1, h2, h3], {'$H(Y_{t+\tau}|Y_{t+\tau-1}),$', '$H(Y_{t+\tau}|Y_{t+\tau-1}),$', '$H(Y_{t+\tau}|Y_{t+\tau-1}),$'}, ...
               'Location', 'southwest', 'Interpreter', 'latex', 'FontSize', 11);
 set(leg2, 'Box', 'off'); % Remove box for a clean look
